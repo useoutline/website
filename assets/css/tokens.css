@@ -1,0 +1,40 @@
+html {
+  font-size: calc(0.625 * 16px);
+
+  --color-primary: #4685ff;
+  --color-primary-light-100: #b5ceff;
+  --color-primary-light-200: #90b6ff;
+  --color-primary-light-300: #6b9dff;
+  --color-primary-light-400: #f9fbff;
+  --color-primary-dark-100: #386acc;
+  --color-primary-dark-200: #0a66c2;
+  --color-primary-dark-300: #5865f2;
+  --color-primary-dark-400: #15284c;
+
+  --fs-48: 4.8rem;
+  --fs-20: 2rem;
+  --fs-32: 3.2rem;
+  --fs-16: 1.6rem;
+  --fs-14: 1.4rem;
+  --fs-36: 3.6rem;
+
+  --rounded-10: 1rem;
+
+  --illustration-size: 16rem;
+
+  --duration-300: 300ms;
+  --duration-150: 150ms;
+  --easing-100: cubic-bezier(0, 0.55, 0.45, 1);
+
+  scroll-behavior: smooth;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: calc(0.625 * 12px);
+    }
+}
