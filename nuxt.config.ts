@@ -14,33 +14,41 @@ export default defineNuxtConfig({
           name: "msapplication-TileColor",
           content: "#2d89ef",
         },
+        {
+          name: "msapplication-Config",
+          content: "/favicons/browserconfig.xml",
+        },
       ],
       link: [
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
-          href: "/apple-touch-icon.png",
+          href: "/favicons/apple-touch-icon.png",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "32x32",
-          href: "/favicon-32x32.png",
+          href: "/favicons/favicon-32x32.png",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
-          href: "/favicon-16x16.png",
+          href: "/favicons/favicon-16x16.png",
         },
         {
           rel: "manifest",
-          href: "/site.webmanifest",
+          href: "/favicons/site.webmanifest",
         },
         {
           rel: "mask-icon",
-          href: "/safari-pinned-tab.svg",
+          href: "/favicons/safari-pinned-tab.svg",
           color: "#4685ff",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/favicons/favicon.ico",
         },
         {
           rel: "preconnect",
@@ -67,7 +75,7 @@ export default defineNuxtConfig({
     {
       path: "~/components/LandingPage",
       pathPrefix: false,
-      enabled: true,
     },
+    "~/components",
   ],
 });

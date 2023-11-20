@@ -1,16 +1,11 @@
-<script setup lang="ts">
-const popShow = MotionProps.popShow;
-</script>
-
 <template>
   <section
     id="hero"
     class="container flex flex-column items-center justify-center hero"
     v-motion
-    :initial="popShow.initial"
-    :enter="popShow.enter"
-    :delay="popShow.delay"
-    ,
+    :initial="MotionProps.popShow.initial"
+    :enter="MotionProps.popShow.enter"
+    :delay="MotionProps.popShow.delay"
   >
     <h1 class="fs-48 color-primary text-center">
       Uncover Insights with Privacy-Focused Analytics
@@ -28,17 +23,11 @@ const popShow = MotionProps.popShow;
 <style scoped>
 .hero {
   gap: 2.4rem;
-  height: clamp(48rem, calc(100% - 12rem), 80rem);
+  height: clamp(48rem, calc(100% - 16rem), 72rem);
 }
 
 .hero h1 {
   max-width: 64rem;
-}
-
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: var(--fs-36);
-  }
 }
 
 .hero p {
@@ -47,5 +36,15 @@ const popShow = MotionProps.popShow;
 
 .hero-btn {
   padding: 1.4rem 2.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--fs-36);
+  }
+
+  .hero {
+    height: max-content;
+  }
 }
 </style>

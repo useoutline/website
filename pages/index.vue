@@ -1,6 +1,27 @@
 <template>
-  <main class="height-full">
+  <main class="main-app">
     <AppHeader />
-    <AppHero />
+    <AppHero class="page-section" />
+    <AppIllustration />
+    <AppFeatures id="features" class="page-section" />
   </main>
 </template>
+
+<style scoped>
+.main-app {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.page-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .page-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+</style>
