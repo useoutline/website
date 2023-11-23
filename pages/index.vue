@@ -11,6 +11,7 @@ useHead({
     <AppIllustration />
     <AppFeatures id="features" class="page-section" />
     <AppStayUpdated class="page-section" />
+    <AppFooter class="page-footer page-section" />
   </main>
 </template>
 
@@ -25,10 +26,18 @@ useHead({
   padding-bottom: 4rem;
 }
 
+.page-footer {
+  margin-top: 20rem;
+}
+
 @media screen and (max-width: 767px) {
   .page-section {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .page-footer {
+    margin-top: 10rem;
   }
 }
 </style>

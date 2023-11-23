@@ -31,7 +31,7 @@
   padding: 1.4rem 2.2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .hero h1 {
     font-size: var(--fs-32);
   }

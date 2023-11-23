@@ -15,7 +15,7 @@
       >
     </NuxtLink>
     <div class="flex items-center menu-items">
-      <NuxtLink to="#features" class="font-medium link-underline-transition"
+      <!-- <NuxtLink to="#features" class="font-medium link-underline-transition"
         >Features</NuxtLink
       >
       <NuxtLink to="#pricing" class="font-medium link-underline-transition"
@@ -25,7 +25,7 @@
         :to="{ name: 'blog' }"
         class="font-medium link-underline-transition"
         >Blog</NuxtLink
-      >
+      > -->
       <GetEarlyAccessCTA />
     </div>
   </header>
@@ -34,7 +34,7 @@
 <style scoped>
 .header-logo {
   width: 6.4rem;
-  height: 6.4rem;
+  aspect-ratio: 1 / 1;
 }
 
 .menu-items {

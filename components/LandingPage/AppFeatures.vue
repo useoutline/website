@@ -94,7 +94,7 @@ function generateFeatureTitle(title: string) {
   gap: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .feature-image {
     width: 10rem;
   }

@@ -19,7 +19,7 @@
   height: max-content;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .app-illustration-section {
     margin-top: 0;
     height: max-content;

@@ -17,6 +17,8 @@ html {
   --fs-16: 1.6rem;
   --fs-14: 1.4rem;
   --fs-36: 3.6rem;
+  --fs-12: 1.2rem;
+  --fs-18: 1.8rem;
 
   --rounded-10: 1rem;
 
@@ -33,7 +35,7 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     html {
         font-size: calc(0.625 * 12px);
     }

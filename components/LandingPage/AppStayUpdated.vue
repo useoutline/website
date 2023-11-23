@@ -1,6 +1,6 @@
 <template>
   <section
-    class="min-height-full flex flex-column items-center justify-center container"
+    class="flex flex-column items-center justify-center container"
     style="gap: 4rem"
   >
     <div class="flex flex-column items-center justify-center" style="gap: 2rem">
@@ -14,9 +14,12 @@
         access to Outline Analytics. You'll be at the forefront of a data
         revolution. Have questions or want to learn more?
         <br class="mobile-hide" />Reach out to us at
-        <a href="mailto:hello@useoutline.xyz" class="color-primary font-bold">{{
-          AppLinks.mainEmail
-        }}</a>
+        <NuxtLink
+          :to="`mailto:${AppLinks.mainEmail}`"
+          rel="noopener noreferrer nofollow"
+          class="color-primary font-bold link-underline-transition"
+          >{{ AppLinks.mainEmail }}</NuxtLink
+        >
       </p>
       <GetEarlyAccessCTA />
     </div>
@@ -32,6 +35,9 @@
           :to="social.link"
           :title="social.title"
           target="_blank"
+          rel="noopener"
+          style="line-height: 1"
+          class="icon-hover-transition"
         >
           <img :alt="social.name" :src="social.icon" />
         </NuxtLink>
