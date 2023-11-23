@@ -5,46 +5,51 @@ import SimplifiedTrackingPowerfulInsightsIllustration from "~/assets/images/simp
 
 const features = [
   {
-    heading: "Privacy First:  No Intrusive Cookies",
+    heading: "/{Privacy First:}/  No Intrusive Cookies",
     description:
       "Our cookie-free approach ensures your users' data remains private. No invasive tracking, just insightful analytics that respect user privacy.",
     image: PrivacyFirstNoCookiesIllustration,
   },
   {
-    heading: "Open Source, Your Control",
+    heading: "/{Open Source}/, Your Control",
     description:
       "With our open-source platform, you're in control. Customize data collection and analysis to suit your needs, all while maintaining transparency.",
     image: OpenSourceYourControlIllustration,
   },
   {
-    heading: "Simplified Tracking,  Powerful Insights",
+    heading: "Simplified Tracking, /{Powerful Insights}/",
     description:
       "Integrate our easy-to-use SDK effortlessly.  No complex setups. No coding hassle. Start gathering meaningful insights within minutes.",
     image: SimplifiedTrackingPowerfulInsightsIllustration,
   },
 ];
 
-let initialDelay = 0;
-
-function generateNextDelay() {
-  initialDelay += MotionProps.popBlur.delay * 2;
-  return initialDelay;
+function generateFeatureTitle(title: string) {
+  const titleParts = title.split("/");
+  return titleParts.map((part) => {
+    if (part.startsWith("{") && part.endsWith("}")) {
+      return {
+        text: part.replace("{", "").replace("}", ""),
+        isBlue: true,
+      };
+    } else {
+      return {
+        text: part,
+        isBlue: false,
+      };
+    }
+  });
 }
 </script>
 
 <template>
   <section
-    class="min-height-full flex flex-column items-center justify-center container features"
-    style="gap: 3.2rem"
+    class="min-height-full flex flex-column items-center justify-center container features-section"
   >
-    <h2
-      class="fs-32"
-      v-motion
-      :initial="MotionProps.popBlur.initial"
-      :visibleOnce="MotionProps.popBlur.enter"
-      :delay="generateNextDelay()"
-    >
-      Why Choose Outline Analytics?
+    <h2 class="fs-32 text-center text-balance">
+      Why Choose <br class="desktop-hide" /><span class="color-primary"
+        >Outline Analytics</span
+      >?
     </h2>
     <div class="flex flex-column feature-container">
       <div
@@ -53,40 +58,28 @@ function generateNextDelay() {
         class="flex justify-between items-center flex-grow feature-block"
       >
         <div class="flex flex-column" style="gap: 0.8rem">
-          <h3
-            v-motion
-            :initial="MotionProps.popBlur.initial"
-            :visibleOnce="MotionProps.popBlur.enter"
-            :delay="generateNextDelay()"
-          >
-            {{ feature.heading }}
+          <h3 class="fs-20 feature-title text-balance">
+            <span
+              v-for="titlePart in generateFeatureTitle(feature.heading)"
+              :key="titlePart.text"
+              :class="{ 'color-primary': titlePart.isBlue }"
+              >{{ titlePart.text }}</span
+            >
           </h3>
-          <p
-            class="feature-description"
-            v-motion
-            :initial="MotionProps.popBlur.initial"
-            :visibleOnce="MotionProps.popBlur.enter"
-            :delay="generateNextDelay()"
-          >
+          <p class="feature-description text-balance">
             {{ feature.description }}
           </p>
         </div>
-        <img
-          :src="feature.image"
-          class="feature-image"
-          v-motion
-          :initial="MotionProps.popBlur.initial"
-          :visibleOnce="MotionProps.popBlur.enter"
-          :delay="generateNextDelay()"
-        />
+        <img :src="feature.image" class="feature-image" />
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.features {
+.features-section {
   max-width: 72rem;
+  gap: 2rem;
 }
 
 .feature-description {
@@ -108,10 +101,20 @@ function generateNextDelay() {
 
   .feature-block {
     gap: 1.6rem;
+    flex-direction: column-reverse;
   }
 
   .feature-container {
     gap: 3.2rem;
+  }
+
+  .features-section {
+    gap: 3.2rem;
+  }
+
+  .feature-description,
+  .feature-title {
+    text-align: center;
   }
 }
 </style>

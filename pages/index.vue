@@ -1,9 +1,16 @@
+<script setup lang="ts">
+useHead({
+  title: "Outline Analytics - Uncover Insights with Privacy-Focused Analytics",
+});
+</script>
+
 <template>
   <main class="main-app">
     <AppHeader />
     <AppHero class="page-section" />
     <AppIllustration />
     <AppFeatures id="features" class="page-section" />
+    <AppStayUpdated class="page-section" />
   </main>
 </template>
 

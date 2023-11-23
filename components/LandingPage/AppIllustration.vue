@@ -4,14 +4,6 @@
       src="~/assets/images/landing-page-illustration.svg"
       loading="lazy"
       class="app-illustration"
-      v-motion
-      :initial="MotionProps.popScale.initial"
-      :visibleOnce="MotionProps.popScale.enter"
-      :delay="
-        MotionProps.popShow.enter.transition.duration +
-        MotionProps.popShow.delay +
-        50
-      "
     />
   </section>
 </template>
@@ -19,12 +11,12 @@
 <style scoped>
 .app-illustration {
   max-width: 100%;
-  aspect-ratio: 720 / 434.32;
+  aspect-ratio: 900 / 535.91;
 }
 
 .app-illustration-section {
   margin-top: -100px;
-  height: max(50%, 434.32px);
+  height: max-content;
 }
 
 @media screen and (max-width: 768px) {

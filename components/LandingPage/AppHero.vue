@@ -1,16 +1,9 @@
 <template>
-  <section
-    id="hero"
-    class="container flex flex-column items-center justify-center hero"
-    v-motion
-    :initial="MotionProps.popShow.initial"
-    :enter="MotionProps.popShow.enter"
-    :delay="MotionProps.popShow.delay"
-  >
-    <h1 class="fs-48 color-primary text-center">
+  <section class="container flex flex-column items-center justify-center hero">
+    <h1 class="fs-48 color-primary text-center text-balance">
       Uncover Insights with Privacy-Focused Analytics
     </h1>
-    <p class="text-center">
+    <p class="text-center text-balance">
       Unlock valuable insights while respecting user privacy with Outline
       Analytics. Our cookie-free solution empowers businesses to gather data
       ethically. <br class="mobile-hide" />Sign up now to join the movement
@@ -40,7 +33,7 @@
 
 @media screen and (max-width: 768px) {
   .hero h1 {
-    font-size: var(--fs-36);
+    font-size: var(--fs-32);
   }
 
   .hero {

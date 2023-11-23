@@ -6,7 +6,7 @@
       title="Outline Analytics (https://useoutline.xyz)"
     >
       <img
-        src="@/assets/images/useoutline-logo-padded.svg"
+        src="~/assets/images/useoutline-logo-padded.svg"
         alt="Logo"
         class="header-logo"
       />

@@ -74,6 +74,10 @@ h1 {
   text-align: center;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .fs-16 {
   font-size: var(--fs-16);
 }
@@ -108,7 +112,7 @@ h1 {
 
 .min-height-full {
   height: 100%;
-  max-height: 72rem;
+  max-height: 90rem;
 }
 
 .height-full {
@@ -148,7 +152,7 @@ h1 {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .mobile-hide {
     display: none;
   }
@@ -164,6 +168,12 @@ h1 {
 
   .height-full {
     height: max-content;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-hide {
+    display: none;
   }
 }
 
