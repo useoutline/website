@@ -4,7 +4,7 @@ useHead({
     "Blog @ Outline Analytics - Uncover Insights with Privacy-Focused Analytics",
 });
 
-const { data } = await useAsyncData("blogs", () => queryContent().find());
+const { data } = await useAsyncData("blogs", () => queryContent("blog").find());
 const blogs = data.value?.toSorted(
   (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
 );
@@ -19,12 +19,30 @@ const blogs = data.value?.toSorted(
   <main class="min-height-full flex flex-column" v-else>
     <AppHeader style="width: 100%" />
     <div
-      class="flex-grow flex flex-column items-center justify-center"
+      class="flex-grow flex flex-column items-center justify-center container"
       style="gap: 2rem"
     >
+      <img
+        src="~/assets/images/coming-soon-illustration.svg"
+        loading="lazy"
+        class="illustration-coming-soon"
+      />
       <h2>Blogs coming soon. Subscribe to stay updated.</h2>
+      <div class="flex items-center justify-center" style="gap: 2rem">
+        <button class="button-primary rounded-10">Subscribe</button>
+        <NuxtLink
+          to="/"
+          class="color-primary link-underline-transition font-bold"
+          >Back to Home!</NuxtLink
+        >
+      </div>
     </div>
   </main>
 </template>
 
-<style></style>
+<style>
+.illustration-coming-soon {
+  width: 100%;
+  max-height: 32rem;
+}
+</style>
