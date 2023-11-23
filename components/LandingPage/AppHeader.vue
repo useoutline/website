@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center fixed justify-between container">
+  <header class="flex items-center justify-between container">
     <NuxtLink
       to="/"
       class="flex items-center"

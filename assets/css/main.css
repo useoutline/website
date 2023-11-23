@@ -8,6 +8,10 @@ p {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--color-primary-light-400);
   color: var(--color-primary-dark-400);
@@ -139,6 +143,10 @@ img {
   height: 100%;
 }
 
+.relative {
+  position: relative;
+}
+
 /* Blocks */
 .container {
   max-width: 120rem;
@@ -180,6 +188,22 @@ img {
 
 .icon-hover-transition:hover {
   scale: 1.25 1.25;
+}
+
+/* Components */
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light-400);
+  padding: 1rem 1.4rem;
+  border: 2px solid var(--color-primary);
+  text-transform: capitalize;
+  transition: background-color var(--duration-300) var(--easing-100),
+    color var(--duration-300) var(--easing-100);
+}
+
+.button-primary:where(:hover, :focus-visible) {
+  background-color: var(--color-primary-light-400);
+  color: var(--color-primary);
 }
 
 /* Media Queries */
