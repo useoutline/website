@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <main class="main-app">
+  <main class="min-height-full">
     <AppHeader />
     <AppHero class="page-section" />
     <AppIllustration />
@@ -16,11 +16,6 @@ useHead({
 </template>
 
 <style scoped>
-.main-app {
-  overflow-y: auto;
-  height: 100%;
-}
-
 .page-section {
   padding-top: 4rem;
   padding-bottom: 4rem;

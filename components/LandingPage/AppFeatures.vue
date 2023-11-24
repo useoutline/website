@@ -70,7 +70,12 @@ function generateFeatureTitle(title: string) {
             {{ feature.description }}
           </p>
         </div>
-        <img :src="feature.image" class="feature-image" />
+        <img
+          :src="feature.image"
+          loading="lazy"
+          :alt="feature.heading"
+          class="feature-image"
+        />
       </div>
     </div>
   </section>

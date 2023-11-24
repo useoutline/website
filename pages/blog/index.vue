@@ -29,7 +29,7 @@ const blogs = data.value?.toSorted(
       />
       <h2>Blogs coming soon. Subscribe to stay updated.</h2>
       <div class="flex items-center justify-center" style="gap: 2rem">
-        <button class="button-primary rounded-10">Subscribe</button>
+        <button class="button-primary font-bold">Subscribe</button>
         <NuxtLink
           to="/"
           class="color-primary link-underline-transition font-bold"

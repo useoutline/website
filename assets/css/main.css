@@ -12,6 +12,20 @@ p {
   box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  border: 1px solid var(--color-primary-light-300);
+}
+
+:where(button, input) {
+  outline: none;
+  transition: outline var(--duration-300) var(--easing-100);
+}
+
+:where(button, input, div):where(:focus-visible) {
+  outline: 2px solid var(--color-primary);
+}
+
 body {
   background-color: var(--color-primary-light-400);
   color: var(--color-primary-dark-400);
@@ -24,6 +38,7 @@ body {
 
 #__nuxt {
   height: 100%;
+  overflow-y: auto;
 }
 
 a {
@@ -34,10 +49,10 @@ a {
 button {
   border: none;
   box-shadow: none;
-  outline: none;
   cursor: pointer;
   user-select: none;
   font-size: var(--fs-16);
+  background: transparent;
 }
 
 h1 {
@@ -173,11 +188,11 @@ img {
   transition: scale var(--duration-150) ease-in-out;
 }
 
-.link-underline-transition:hover {
+.link-underline-transition:where(:hover, :focus-visible) {
   color: var(--color-primary-dark-100);
 }
 
-.link-underline-transition:hover:after {
+.link-underline-transition:where(:hover, :focus-visible):after {
   scale: 1 1;
 }
 
@@ -186,7 +201,7 @@ img {
   transition: scale var(--duration-150) ease-in-out;
 }
 
-.icon-hover-transition:hover {
+.icon-hover-transition:where(:hover, :focus-visible) {
   scale: 1.25 1.25;
 }
 
@@ -199,11 +214,65 @@ img {
   text-transform: capitalize;
   transition: background-color var(--duration-300) var(--easing-100),
     color var(--duration-300) var(--easing-100);
+  border-radius: var(--rounded-10);
 }
 
 .button-primary:where(:hover, :focus-visible) {
   background-color: var(--color-primary-light-400);
   color: var(--color-primary);
+}
+
+.overlay-container {
+  position: fixed;
+  z-index: var(--z-100000);
+  inset: 0;
+  background-color: var(--color-primary-opacity-100);
+  backdrop-filter: blur(2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.overlay-content-card {
+  background-color: var(--color-primary-light-400);
+  padding: 4rem;
+  border-radius: var(--rounded-10);
+  width: 100%;
+  max-width: 60rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: height var(--duration-300) var(--easing-100),
+    width var(--duration-300) var(--easing-100);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: var(--fs-14);
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 1rem 1.4rem;
+  border-radius: var(--rounded-10);
+  border: 1px solid var(--color-primary-light-300);
+  font-size: var(--fs-16);
+  color: var(--color-primary-dark-400);
+  transition: outline var(--duration-300) var(--easing-100);
+  outline: 2px solid transparent;
+}
+
+.form-group input:focus-visible {
+  outline: 2px solid var(--color-primary);
 }
 
 /* Media Queries */

@@ -11,8 +11,9 @@
             title="Outline Analytics (https://useoutline.xyz)"
           >
             <img
+              loading="lazy"
               src="~/assets/images/useoutline-logo-padded-white.svg"
-              alt="Logo"
+              alt="Outline Analytics"
               class="footer-logo"
             />
           </NuxtLink>
@@ -54,25 +55,25 @@
             class="font-medium link-underline-transition color-light-400"
             >Blog</NuxtLink
           >
-          <span
+          <!-- <span
             to=""
             class="font-medium color-light-400"
             title="Coming Soon"
             style="opacity: 0.75"
             >Career</span
-          >
+          > -->
         </div>
         <div class="flex flex-column footer-links">
           <h3 class="fs-18 font-normal">Legal</h3>
           <NuxtLink
             to="/terms"
             class="font-medium link-underline-transition color-light-400"
-            >Term of use</NuxtLink
+            >Terms of use</NuxtLink
           >
           <NuxtLink
             to="/privacy"
             class="font-medium link-underline-transition color-light-400"
-            >Privacy</NuxtLink
+            >Privacy Policy</NuxtLink
           >
         </div>
         <div class="flex flex-column footer-links">
@@ -94,6 +95,7 @@
               rel="noopener"
               target="_blank"
               ><img
+                loading="lazy"
                 :src="social.altIcon"
                 :alt="social.name"
                 class="footer-social-icon"
@@ -107,7 +109,19 @@
 
 <style scoped>
 .app-footer {
+  position: relative;
   background-color: var(--color-primary);
+  border-radius: 6.4rem 6.4rem 0 0;
+}
+
+.app-footer::before {
+  position: absolute;
+  content: "";
+}
+
+.app-footer::after {
+  position: absolute;
+  content: "";
 }
 
 .footer-container {
