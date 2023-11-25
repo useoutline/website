@@ -8,6 +8,8 @@ const { data } = await useAsyncData("blogs", () => queryContent("blog").find());
 const blogs = data.value?.toSorted(
   (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
 );
+
+const showEarlyAccessSignup = ref(false);
 </script>
 
 <template>
@@ -29,7 +31,16 @@ const blogs = data.value?.toSorted(
       />
       <h2>Blogs coming soon. Subscribe to stay updated.</h2>
       <div class="flex items-center justify-center" style="gap: 2rem">
-        <button class="button-primary font-bold">Subscribe</button>
+        <button
+          class="button-primary font-bold"
+          @click.stop="showEarlyAccessSignup = true"
+        >
+          Subscribe
+        </button>
+        <EarlyAccessSignup
+          v-if="showEarlyAccessSignup"
+          @close="showEarlyAccessSignup = false"
+        />
         <NuxtLink
           to="/"
           class="color-primary link-underline-transition font-bold"
