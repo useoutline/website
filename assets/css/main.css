@@ -55,6 +55,11 @@ button {
   background: transparent;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
 h1 {
   font-weight: bold;
   line-height: 1.2;
@@ -143,6 +148,10 @@ img {
 
 .color-primary {
   color: var(--color-primary);
+}
+
+.color-error-100 {
+  color: var(--color-error-100);
 }
 
 .color-light-400 {

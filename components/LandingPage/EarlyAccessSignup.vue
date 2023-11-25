@@ -1,18 +1,42 @@
 <script lang="ts" setup>
+import { useVuelidate } from "@vuelidate/core";
+import { email, required } from "@vuelidate/validators";
+
 const emit = defineEmits(["close"]);
-const email = ref("");
-const newsletter = ref(false);
+const formData = reactive({
+  email: "",
+  newsletter: false,
+});
 const formState = ref<"idle" | "submitting" | "success" | "error">("idle");
+const rules = computed(() => ({
+  email: { required, email },
+  newsletter: {},
+}));
+
+const v$ = useVuelidate(rules, formData);
+
+if (process.client) {
+  watch(
+    () => formData.email,
+    () => {
+      console.log("email changed", v$.value.email);
+    }
+  );
+}
 
 async function submitForm() {
+  if (v$.value.$invalid) {
+    v$.value.$touch();
+    return;
+  }
   formState.value = "submitting";
   const { error } = await useFetch(
     "https://api.useoutline.xyz/v1/early-access-signup",
     {
       method: "POST",
       body: JSON.stringify({
-        email: email.value,
-        newsletter: newsletter.value,
+        email: formData.email,
+        newsletter: formData.newsletter,
       }),
     }
   );
@@ -46,14 +70,26 @@ async function submitForm() {
         <div class="form-group">
           <label for="email">Email Address</label>
           <div class="flex signup-input-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="E.g. abc@example.com"
-              class="flex-grow"
-              v-model="email"
-            />
+            <div class="flex flex-column flex-grow" style="gap: 0.6rem">
+              <input
+                type="email"
+                id="email"
+                placeholder="E.g. abc@example.com"
+                class="flex-grow"
+                v-model="formData.email"
+                :class="{ 'input-error': v$.email.$dirty && v$.email.$invalid }"
+                @keyup="v$.email.$touch"
+              />
+              <div
+                v-if="v$.email.$dirty && v$.email.$invalid"
+                class="color-error-100 fs-14"
+              >
+                <span v-if="v$.email.email.$invalid">Email is invalid</span>
+                <span v-else-if="v$.email.required.$invalid"
+                  >Email is required</span
+                >
+              </div>
+            </div>
             <button class="button-primary font-bold">Subscribe</button>
           </div>
         </div>
@@ -61,10 +97,9 @@ async function submitForm() {
           <input
             type="checkbox"
             id="newsletter"
-            name="newsletter"
-            v-model="newsletter"
+            v-model="formData.newsletter"
           />
-          <label for="newsletter" class="fs-12" style="user-select: none">
+          <label for="newsletter" class="fs-14" style="user-select: none">
             Subscribe to our newsletter
           </label>
         </div>
@@ -112,6 +147,11 @@ async function submitForm() {
 <style scoped>
 .signup-input-group {
   gap: 1rem;
+  align-items: start;
+}
+
+.input-error {
+  border-color: var(--color-error-100);
 }
 
 #newsletter {
@@ -122,6 +162,7 @@ async function submitForm() {
 @media screen and (max-width: 767px) {
   .signup-input-group {
     flex-direction: column;
+    align-items: stretch;
   }
 }
 </style>
