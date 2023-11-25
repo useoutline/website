@@ -24,22 +24,27 @@ if (process.client) {
   );
 }
 
+type FormBody = {
+  email: string;
+  newsletter?: boolean;
+};
+
 async function submitForm() {
   if (v$.value.$invalid) {
     v$.value.$touch();
     return;
   }
   formState.value = "submitting";
-  const { error } = await useFetch(
-    "https://api.useoutline.xyz/v1/early-access-signup",
-    {
-      method: "POST",
-      body: JSON.stringify({
-        email: formData.email,
-        newsletter: formData.newsletter,
-      }),
-    }
-  );
+  const body: FormBody = {
+    email: formData.email,
+  };
+  if (formData.newsletter) {
+    body.newsletter = formData.newsletter;
+  }
+  const { error } = await useFetch(AppApis.EarlyAccessSignup, {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
   if (error.value) {
     formState.value = "error";
     return;
@@ -122,7 +127,8 @@ async function submitForm() {
       <span
         >Thanks!
         <img src="~/assets/images/emojis/rocket.svg" style="width: 2rem" />
-        You're in! Stay tuned for updates!</span
+        You're in! We'll notify you via email as soon as we launch our early
+        access! Stay tuned for updates!</span
       >
     </div>
     <div

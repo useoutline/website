@@ -63,7 +63,7 @@
             >Career</span
           > -->
         </div>
-        <div class="flex flex-column footer-links">
+        <!-- <div class="flex flex-column footer-links">
           <h3 class="fs-18 font-normal">Legal</h3>
           <NuxtLink
             to="/terms"
@@ -75,7 +75,7 @@
             class="font-medium link-underline-transition color-light-400"
             >Privacy Policy</NuxtLink
           >
-        </div>
+        </div> -->
         <div class="flex flex-column footer-links">
           <h3 class="fs-18 font-normal">Contact</h3>
           <NuxtLink
