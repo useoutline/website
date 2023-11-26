@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content"],
   content: {},
   app: {
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
     head: {
       meta: [
         {
