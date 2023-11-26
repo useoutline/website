@@ -50,6 +50,8 @@ async function submitForm() {
       );
       sendEvent("early-access-signup-error", {
         error: error.value.message,
+        email: formData.email,
+        date: Date.now(),
       });
     }
     formState.value = "error";
