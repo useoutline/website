@@ -90,17 +90,15 @@ async function submitForm() {
                 :class="{ 'input-error': v$.email.$dirty && v$.email.$invalid }"
                 @keyup="v$.email.$touch"
               />
-              <Transition name="page" mode="out-in">
-                <div
-                  v-if="v$.email.$dirty && v$.email.$invalid"
-                  class="color-error-100 fs-14"
+              <div
+                v-if="v$.email.$dirty && v$.email.$invalid"
+                class="color-error-100 fs-14"
+              >
+                <span v-if="v$.email.email.$invalid">Email is invalid</span>
+                <span v-else-if="v$.email.required.$invalid"
+                  >Email is required</span
                 >
-                  <span v-if="v$.email.email.$invalid">Email is invalid</span>
-                  <span v-else-if="v$.email.required.$invalid"
-                    >Email is required</span
-                  >
-                </div>
-              </Transition>
+              </div>
             </div>
             <button class="button-primary font-bold">Subscribe</button>
           </div>
@@ -137,6 +135,24 @@ async function submitForm() {
         You're in! We'll notify you via email as soon as we launch our early
         access! Stay tuned for updates!</span
       >
+      <span>
+        Meanwhile, follow us on our social media channels to stay updated on our
+        progress.
+      </span>
+      <div class="flex justify-center" style="gap: 2rem">
+        <NuxtLink
+          v-for="social in AppSocials"
+          :key="social.link"
+          :to="social.link"
+          :title="social.title"
+          target="_blank"
+          rel="noopener"
+          style="line-height: 1"
+          class="icon-hover-transition"
+        >
+          <img loading="lazy" :alt="social.name" :src="social.icon" />
+        </NuxtLink>
+      </div>
     </div>
     <div
       v-else
@@ -168,8 +184,8 @@ async function submitForm() {
 }
 
 #newsletter {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 @media screen and (max-width: 767px) {

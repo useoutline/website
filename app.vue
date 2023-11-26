@@ -4,7 +4,6 @@ import useOutlineAnalytics from "@useoutline/analytics";
 const config = useRuntimeConfig();
 
 if (process.client) {
-  console.log(import.meta.dev, import.meta);
   const analytics = useAnalytics();
   const data = await useOutlineAnalytics(config.public.outlineAnalyticsId, {
     mock: import.meta.dev,
