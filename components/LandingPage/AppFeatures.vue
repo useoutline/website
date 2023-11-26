@@ -74,8 +74,6 @@ function generateFeatureTitle(title: string) {
           :src="feature.image"
           :alt="feature.heading"
           class="feature-image"
-          width="160"
-          height="160"
         />
       </div>
     </div>

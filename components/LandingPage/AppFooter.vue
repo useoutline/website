@@ -27,8 +27,6 @@
                 alt="Love ❤️"
                 src="~/assets/images/emojis/heart-emoji.png"
                 class="footer-emoji"
-                width="36"
-                height="14"
               />
               in
               <img
@@ -36,8 +34,6 @@
                 alt="India 🇮🇳"
                 src="~/assets/images/emojis/India-flag.png"
                 class="footer-emoji"
-                width="36"
-                height="14"
               />
             </span>
           </div>
@@ -102,8 +98,6 @@
                 :src="social.altIcon"
                 :alt="social.name"
                 class="footer-social-icon"
-                width="24"
-                height="24"
             /></NuxtLink>
           </div>
         </div>
