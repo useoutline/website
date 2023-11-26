@@ -14,6 +14,7 @@
 .app-illustration {
   max-width: 100%;
   aspect-ratio: 900 / 535.91;
+  height: auto;
 }
 
 .app-illustration-section {
