@@ -142,7 +142,7 @@ export default defineNuxtConfig({
     "/**": {
       headers: {
         "X-Frame-Options": "DENY",
-        "Content-Security-Policy": `frame-ancestors 'none'; script-src 'self' 'unsafe-inline' *.useoutline.xyz; style-src 'self' 'unsafe-inline' *.useoutline.xyz *.gstatic.com *.googleapis.com; img-src 'self' *.useoutline.xyz; font-src 'self' data: *.useoutline.xyz *.gstatic.com *.googleapis.com;`,
+        "Content-Security-Policy": `frame-ancestors 'none'; script-src 'self' 'unsafe-inline' *.useoutline.xyz; style-src 'self' 'unsafe-inline' *.useoutline.xyz *.gstatic.com *.googleapis.com; img-src 'self' data: *.useoutline.xyz; font-src 'self' data: *.useoutline.xyz *.gstatic.com *.googleapis.com;`,
         "X-Content-Type-Options": "nosniff",
         "Referrer-Policy": "origin",
       },
