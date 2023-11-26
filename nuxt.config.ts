@@ -144,4 +144,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    public: {
+      outlineAnalyticsId: "", // can be overridden by NUXT_PUBLIC_OUTLINE_ANALYTICS_ID environment variable
+    },
+  },
 });

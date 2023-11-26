@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { useVuelidate } from "@vuelidate/core";
 import { email, required } from "@vuelidate/validators";
+import useOutlineAnalytics from "@useoutline/analytics";
 
+const config = useRuntimeConfig();
 const emit = defineEmits(["close"]);
 const formData = reactive({
   email: "",
@@ -42,6 +44,14 @@ async function submitForm() {
     await TimerUtils.sleep(1500 - (apiResEnd - apiResStart));
   }
   if (error.value) {
+    if (process.client) {
+      const { sendEvent } = await useOutlineAnalytics(
+        config.public.outlineAnalyticsId
+      );
+      sendEvent("early-access-signup-error", {
+        error: error.value.message,
+      });
+    }
     formState.value = "error";
     return;
   }
