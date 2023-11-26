@@ -18,6 +18,62 @@ export default defineNuxtConfig({
           name: "msapplication-Config",
           content: "/favicons/browserconfig.xml",
         },
+        {
+          name: "title",
+          content:
+            "Outline Analytics - Uncover Insights with Privacy-Focused and Cookie-Free Analytics",
+        },
+        {
+          name: "description",
+          content:
+            "Outline Analytics is privacy-focused, open-source analytics tool for tracking user behavior without cookies. Gain insights, track events, and manage sessions effortlessly while ensuring user privacy.",
+        },
+        // Open Graph
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://useoutline.xyz",
+        },
+        {
+          property: "og:title",
+          content:
+            "Outline Analytics - Uncover Insights with Privacy-Focused and Cookie-Free Analytics",
+        },
+        {
+          property: "og:description",
+          content:
+            "Outline Analytics is privacy-focused, open-source analytics tool for tracking user behavior without cookies. Gain insights, track events, and manage sessions effortlessly while ensuring user privacy.",
+        },
+        {
+          property: "og:image",
+          content: "/meta.png",
+        },
+        // Twitter
+        {
+          property: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          property: "twitter:url",
+          content: "https://useoutline.xyz",
+        },
+        {
+          property: "twitter:title",
+          content:
+            "Outline Analytics - Uncover Insights with Privacy-Focused and Cookie-Free Analytics",
+        },
+        {
+          property: "twitter:description",
+          content:
+            "Outline Analytics is privacy-focused, open-source analytics tool for tracking user behavior without cookies. Gain insights, track events, and manage sessions effortlessly while ensuring user privacy.",
+        },
+        {
+          property: "twitter:image",
+          content: "/meta.png",
+        },
       ],
       link: [
         {

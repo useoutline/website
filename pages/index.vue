@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Outline Analytics - Uncover Insights with Privacy-Focused Analytics",
+  title: `${AppConstants.SiteTitle}`,
 });
 </script>
 

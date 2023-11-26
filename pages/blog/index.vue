@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title:
-    "Blog @ Outline Analytics - Uncover Insights with Privacy-Focused Analytics",
+  title: `Blog @ ${AppConstants.SiteTitle}`,
 });
 
 const { data } = await useAsyncData("blogs", () => queryContent("blog").find());

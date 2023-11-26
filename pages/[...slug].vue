@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title:
-    "Page Not Found @ Outline Analytics - Uncover Insights with Privacy-Focused Analytics",
+  title: `Page Not Found @ ${AppConstants.SiteTitle}`,
 });
 </script>
 
