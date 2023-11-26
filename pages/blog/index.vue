@@ -5,9 +5,12 @@ useHead({
 });
 
 const { data } = await useAsyncData("blogs", () => queryContent("blog").find());
-const blogs = data.value?.toSorted(
-  (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-);
+const blogs = data.value?.length
+  ? [...data.value].sort(
+      (a, b) =>
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    )
+  : [];
 
 const showEarlyAccessSignup = ref(false);
 </script>
