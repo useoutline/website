@@ -39,7 +39,13 @@
           style="line-height: 1"
           class="icon-hover-transition"
         >
-          <img loading="lazy" :alt="social.name" :src="social.icon" />
+          <img
+            loading="lazy"
+            :alt="social.name"
+            :src="social.icon"
+            width="24"
+            height="24"
+          />
         </NuxtLink>
       </div>
     </div>

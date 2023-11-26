@@ -7,7 +7,7 @@
     >
       <img
         src="~/assets/images/useoutline-logo-padded.svg"
-        alt="Outline Analytics"
+        alt="Outline Analytics Logo"
         class="header-logo"
       />
       <span class="fs-32 mobile-hide"
