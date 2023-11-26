@@ -93,15 +93,17 @@ async function submitForm() {
                 :class="{ 'input-error': v$.email.$dirty && v$.email.$invalid }"
                 @keyup="v$.email.$touch"
               />
-              <div
-                v-if="v$.email.$dirty && v$.email.$invalid"
-                class="color-error-100 fs-14"
-              >
-                <span v-if="v$.email.email.$invalid">Email is invalid</span>
-                <span v-else-if="v$.email.required.$invalid"
-                  >Email is required</span
+              <Transition name="page" mode="out-in">
+                <div
+                  v-if="v$.email.$dirty && v$.email.$invalid"
+                  class="color-error-100 fs-14"
                 >
-              </div>
+                  <span v-if="v$.email.email.$invalid">Email is invalid</span>
+                  <span v-else-if="v$.email.required.$invalid"
+                    >Email is required</span
+                  >
+                </div>
+              </Transition>
             </div>
             <button class="button-primary font-bold">Subscribe</button>
           </div>

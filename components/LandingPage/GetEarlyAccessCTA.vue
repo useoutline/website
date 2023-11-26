@@ -24,9 +24,11 @@ async function handleClick() {
     >
       Get Early Access
     </button>
-    <EarlyAccessSignup
-      v-if="showEarlyAccessSignup"
-      @close="showEarlyAccessSignup = false"
-    />
+    <Transition name="page" mode="out-in">
+      <EarlyAccessSignup
+        v-if="showEarlyAccessSignup"
+        @close="showEarlyAccessSignup = false"
+      />
+    </Transition>
   </div>
 </template>

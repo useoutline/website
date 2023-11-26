@@ -39,10 +39,12 @@ const showEarlyAccessSignup = ref(false);
         >
           Subscribe
         </button>
-        <EarlyAccessSignup
-          v-if="showEarlyAccessSignup"
-          @close="showEarlyAccessSignup = false"
-        />
+        <Transition name="page" mode="out-in">
+          <EarlyAccessSignup
+            v-if="showEarlyAccessSignup"
+            @close="showEarlyAccessSignup = false"
+          />
+        </Transition>
         <NuxtLink
           to="/"
           class="color-primary link-underline-transition font-bold"
