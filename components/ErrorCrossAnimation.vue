@@ -44,20 +44,12 @@
 }
 
 .path.circle {
-  -webkit-animation: dash 0.9s ease-in-out;
-  animation: dash 0.9s ease-in-out;
+  animation: dash 0.5s ease-in-out;
 }
 
 .path.line {
   stroke-dashoffset: 1000;
-  -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
-  animation: dash 0.9s 0.35s ease-in-out forwards;
-}
-
-.path.check {
-  stroke-dashoffset: -100;
-  -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
-  animation: dash-check 0.9s 0.35s ease-in-out forwards;
+  animation: dash 0.5s 0.175s ease-in-out forwards;
 }
 
 @keyframes dash {
@@ -66,15 +58,6 @@
   }
   100% {
     stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash-check {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 900;
   }
 }
 </style>

@@ -26,12 +26,14 @@
 
 <style scoped>
 .circle {
-  stroke-dasharray: 1194;
-  stroke-dashoffset: 1194;
+  /* stroke-dasharray: 1194;
+  stroke-dashoffset: 1194; */
+  stroke-dasharray: 2388;
+  stroke-dashoffset: 2388;
 }
 
 svg .circle {
-  animation: circle 1s ease-in-out;
+  animation: circle 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -40,16 +42,16 @@ svg .circle {
   stroke-dashoffset: 350;
 }
 svg .tick {
-  animation: tick 0.8s ease-out;
+  animation: tick 0.4s ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.95s;
+  animation-delay: 0.45s;
 }
 
 @keyframes circle {
-  from {
+  to {
     stroke-dashoffset: 1194;
   }
-  to {
+  from {
     stroke-dashoffset: 2388;
   }
 }

@@ -41,10 +41,15 @@ async function submitForm() {
   if (formData.newsletter) {
     body.newsletter = formData.newsletter;
   }
+  const apiResStart = Date.now();
   const { error } = await useFetch(AppApis.EarlyAccessSignup, {
     method: "POST",
     body: JSON.stringify(body),
   });
+  const apiResEnd = Date.now();
+  if (apiResEnd - apiResStart < 1500) {
+    await TimerUtils.sleep(1500 - (apiResEnd - apiResStart));
+  }
   if (error.value) {
     formState.value = "error";
     return;
