@@ -4,10 +4,12 @@ import useOutlineAnalytics from "@useoutline/analytics";
 const config = useRuntimeConfig();
 
 if (process.client) {
-  useOutlineAnalytics(config.public.outlineAnalyticsId, {
+  const analytics = useAnalytics();
+  const data = await useOutlineAnalytics(config.public.outlineAnalyticsId, {
     mock: import.meta.dev,
     debug: import.meta.dev,
   });
+  analytics.value = data;
 }
 </script>
 

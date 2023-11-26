@@ -7,10 +7,8 @@ const showEarlyAccessSignup = ref(false);
 async function handleClick() {
   showEarlyAccessSignup.value = true;
   if (process.client) {
-    const { sendEvent } = await useOutlineAnalytics(
-      config.public.outlineAnalyticsId
-    );
-    sendEvent("early-access-signup-click");
+    const analytics = useAnalytics();
+    analytics.value?.sendEvent("early-access-signup-click");
   }
 }
 </script>
