@@ -29,11 +29,7 @@ function getRandomWit() {
   <div
     class="flex-grow flex flex-column items-center justify-center relative container"
   >
-    <img
-      src="~/assets/images/404-illustration.svg"
-      loading="lazy"
-      class="illustration-404"
-    />
+    <img src="~/assets/images/404-illustration.svg" class="illustration-404" />
     <div
       class="flex flex-column items-center justify-center description-404 container"
       style="gap: 1.2rem"

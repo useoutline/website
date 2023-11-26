@@ -1,8 +1,10 @@
 <template>
-  <section class="flex items-center justify-center app-illustration-section">
+  <section
+    tag="section"
+    class="flex items-center justify-center app-illustration-section"
+  >
     <img
       src="~/assets/images/landing-page-illustration.svg"
-      loading="lazy"
       class="app-illustration"
     />
   </section>

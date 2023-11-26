@@ -28,7 +28,6 @@ const showEarlyAccessSignup = ref(false);
     >
       <img
         src="~/assets/images/coming-soon-illustration.svg"
-        loading="lazy"
         class="illustration-coming-soon"
       />
       <h2>Blogs coming soon. Subscribe to stay updated.</h2>

@@ -11,7 +11,6 @@
             title="Outline Analytics (https://useoutline.xyz)"
           >
             <img
-              loading="lazy"
               src="~/assets/images/useoutline-logo-padded-white.svg"
               alt="Outline Analytics"
               class="footer-logo"

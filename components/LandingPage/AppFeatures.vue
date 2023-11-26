@@ -72,7 +72,6 @@ function generateFeatureTitle(title: string) {
         </div>
         <img
           :src="feature.image"
-          loading="lazy"
           :alt="feature.heading"
           class="feature-image"
         />
