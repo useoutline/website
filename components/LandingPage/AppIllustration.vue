@@ -1,19 +1,10 @@
-<script setup lang="ts">
-import { Motion } from "motion/vue";
-</script>
-
 <template>
-  <Motion
-    tag="section"
-    class="flex items-center justify-center app-illustration-section"
-    :initial="MotionProps.fadeBlurIn.initial"
-    :animate="MotionProps.fadeBlurIn.animate(0.5, 1.2)"
-  >
+  <section class="flex items-center justify-center app-illustration-section">
     <img
       src="~/assets/images/landing-page-illustration.svg"
       class="app-illustration"
     />
-  </Motion>
+  </section>
 </template>
 
 <style scoped>
