@@ -26,8 +26,6 @@
 
 <style scoped>
 .circle {
-  /* stroke-dasharray: 1194;
-  stroke-dashoffset: 1194; */
   stroke-dasharray: 2388;
   stroke-dashoffset: 2388;
 }

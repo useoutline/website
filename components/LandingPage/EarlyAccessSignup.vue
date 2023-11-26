@@ -15,15 +15,6 @@ const rules = computed(() => ({
 
 const v$ = useVuelidate(rules, formData);
 
-if (process.client) {
-  watch(
-    () => formData.email,
-    () => {
-      console.log("email changed", v$.value.email);
-    }
-  );
-}
-
 type FormBody = {
   email: string;
   newsletter?: boolean;
