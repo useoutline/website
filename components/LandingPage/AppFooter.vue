@@ -27,8 +27,8 @@
                 alt="Love ❤️"
                 src="~/assets/images/emojis/heart-emoji.png"
                 class="footer-emoji"
-                width="35.77"
-                height="32.07"
+                width="36"
+                height="14"
               />
               in
               <img
@@ -37,7 +37,7 @@
                 src="~/assets/images/emojis/India-flag.png"
                 class="footer-emoji"
                 width="36"
-                height="26"
+                height="14"
               />
             </span>
           </div>
