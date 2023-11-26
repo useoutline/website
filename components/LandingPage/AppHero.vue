@@ -1,5 +1,14 @@
+<script setup lang="ts">
+import { Motion } from "motion/vue";
+</script>
+
 <template>
-  <section class="container flex flex-column items-center justify-center hero">
+  <Motion
+    tag="section"
+    class="container flex flex-column items-center justify-center hero"
+    :initial="MotionProps.fadeUpIn.initial"
+    :animate="MotionProps.fadeUpIn.animate(0.3, 0.7)"
+  >
     <h1 class="fs-48 color-primary text-center text-balance">
       Uncover Insights with Privacy-Focused Analytics
     </h1>
@@ -10,7 +19,7 @@
       towards responsible data analytics.
     </p>
     <GetEarlyAccessCTA class="hero-btn" />
-  </section>
+  </Motion>
 </template>
 
 <style scoped>
