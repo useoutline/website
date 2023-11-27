@@ -113,19 +113,6 @@ export default defineNuxtConfig({
           rel: "shortcut icon",
           href: "/favicons/favicon.ico",
         },
-        {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
-        },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap",
-        },
         // {
         //   rel: "preconnect",
         //   href: "https://console.useoutline.xyz",
@@ -145,7 +132,7 @@ export default defineNuxtConfig({
     "/**": {
       headers: {
         "X-Frame-Options": "DENY",
-        "Content-Security-Policy": `frame-ancestors 'none'; script-src 'self' 'unsafe-inline' *.useoutline.xyz; style-src 'self' 'unsafe-inline' *.useoutline.xyz *.gstatic.com *.googleapis.com; img-src 'self' data: *.useoutline.xyz; font-src 'self' data: *.useoutline.xyz *.gstatic.com *.googleapis.com; object-src 'none';`,
+        "Content-Security-Policy": `frame-ancestors 'none'; script-src 'self' 'unsafe-inline' *.useoutline.xyz; style-src 'self' 'unsafe-inline' *.useoutline.xyz; img-src 'self' data: *.useoutline.xyz; font-src 'self' data:; object-src 'none';`,
         "X-Content-Type-Options": "nosniff",
         "Referrer-Policy": "origin",
       },

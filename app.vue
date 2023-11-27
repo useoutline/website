@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "@fontsource-variable/inter";
 import useOutlineAnalytics from "@useoutline/analytics";
 
 const config = useRuntimeConfig();

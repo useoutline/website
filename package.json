@@ -16,6 +16,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.0.15",
     "@nuxt/content": "^2.9.0",
     "@useoutline/analytics": "^0.1.6",
     "@vuelidate/core": "^2.0.3",

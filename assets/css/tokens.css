@@ -32,11 +32,13 @@ html {
 
   --z-100000: 100000;
 
+  --font-family: "Inter Variable", sans-serif;
+
   scroll-behavior: smooth;
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
 }
 
 @media screen and (max-width: 1023px) {

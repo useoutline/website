@@ -53,6 +53,7 @@ button {
   user-select: none;
   font-size: var(--fs-16);
   background: transparent;
+  font-family: var(--font-family);
 }
 
 button:disabled {
