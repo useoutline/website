@@ -44,7 +44,7 @@ function generateFeatureTitle(title: string) {
 
 <template>
   <section
-    class="min-height-full flex flex-column items-center justify-center container features-section"
+    class="flex flex-column items-center justify-center container features-section"
   >
     <h2 class="fs-32 text-center text-balance">
       Why Choose <br class="desktop-hide" /><span class="color-primary"
@@ -84,6 +84,8 @@ function generateFeatureTitle(title: string) {
 .features-section {
   max-width: 72rem;
   gap: 2rem;
+  min-height: 100%;
+  max-height: max-content;
 }
 
 .feature-description {
