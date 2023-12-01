@@ -20,38 +20,34 @@ const showEarlyAccessSignup = ref(false);
       <NuxtLink :to="`${blog._path}`">{{ blog.title }}</NuxtLink>
     </div>
   </main>
-  <main class="min-height-full flex flex-column" v-else>
-    <AppHeader style="width: 100%" />
-    <div
-      class="flex-grow flex flex-column items-center justify-center container"
-      style="gap: 2rem"
-    >
-      <img
-        src="~/assets/images/coming-soon-illustration.svg"
-        class="illustration-coming-soon"
-      />
-      <h2>Blogs coming soon. Subscribe to stay updated.</h2>
-      <div class="flex items-center justify-center" style="gap: 2rem">
-        <button
-          class="button-primary font-bold"
-          @click.stop="showEarlyAccessSignup = true"
-        >
-          Subscribe
-        </button>
-        <Transition name="page" mode="out-in">
-          <EarlyAccessSignup
-            v-if="showEarlyAccessSignup"
-            @close="showEarlyAccessSignup = false"
-          />
-        </Transition>
-        <NuxtLink
-          to="/"
-          class="color-primary link-underline-transition font-bold"
-          >Back to Home!</NuxtLink
-        >
-      </div>
+  <div
+    v-else
+    class="flex-grow flex flex-column items-center justify-center container"
+    style="gap: 2rem"
+  >
+    <img
+      src="~/assets/images/coming-soon-illustration.svg"
+      class="illustration-coming-soon"
+    />
+    <h2>Blogs coming soon. Subscribe to stay updated.</h2>
+    <div class="flex items-center justify-center" style="gap: 2rem">
+      <button
+        class="button-primary font-bold"
+        @click.stop="showEarlyAccessSignup = true"
+      >
+        Subscribe
+      </button>
+      <Transition name="page" mode="out-in">
+        <EarlyAccessSignup
+          v-if="showEarlyAccessSignup"
+          @close="showEarlyAccessSignup = false"
+        />
+      </Transition>
+      <NuxtLink to="/" class="color-primary link-underline-transition font-bold"
+        >Back to Home!</NuxtLink
+      >
     </div>
-  </main>
+  </div>
 </template>
 
 <style>

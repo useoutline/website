@@ -18,7 +18,6 @@
 }
 
 .app-illustration-section {
-  margin-top: -100px;
   height: max-content;
 }
 

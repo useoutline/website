@@ -39,7 +39,7 @@ function getRandomWit() {
       </h2>
       <p
         v-if="errorWit"
-        style="max-width: 56rem; margin-bottom: 4rem"
+        style="max-width: 56rem; margin-bottom: 2rem"
         class="text-center"
       >
         {{ errorWit }}
@@ -57,13 +57,17 @@ function getRandomWit() {
 }
 .description-404 {
   position: absolute;
-  bottom: 16%;
+  bottom: -3.2rem;
 }
 
 @media screen and (max-width: 767px) {
   .illustration-404 {
     width: 100%;
     max-width: 40rem;
+  }
+
+  .description-404 {
+    bottom: -6.4rem;
   }
 }
 </style>

@@ -39,6 +39,7 @@ body {
 #__nuxt {
   height: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -160,12 +161,15 @@ img {
 }
 
 .min-height-full {
-  height: 100%;
-  max-height: 90rem;
+  min-height: 100%;
 }
 
 .height-full {
   height: 100%;
+}
+
+.width-full {
+  width: 100%;
 }
 
 .relative {
@@ -209,10 +213,20 @@ img {
 .icon-hover-transition {
   will-change: scale;
   transition: scale var(--duration-150) ease-in-out;
+  user-select: none;
 }
 
 .icon-hover-transition:where(:hover, :focus-visible) {
   scale: 1.25 1.25;
+}
+
+.page-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.page-footer {
+  margin-top: 10rem;
 }
 
 /* Components */
@@ -303,6 +317,15 @@ img {
   .height-full {
     height: max-content;
   }
+
+  .page-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+  .page-footer {
+    margin-top: 10rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -310,7 +333,3 @@ img {
     display: none;
   }
 }
-
-/* section {
-  outline: 1px solid red;
-} */

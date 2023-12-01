@@ -84,7 +84,7 @@
             >{{ AppLinks.mainEmail }}</NuxtLink
           >
           <h3 class="fs-18 font-normal">Social</h3>
-          <div class="flex items-center" style="gap: 1rem">
+          <div class="flex items-center" style="gap: 1.25rem">
             <NuxtLink
               v-for="social in AppSocials"
               :key="social.link"
@@ -141,7 +141,7 @@
 }
 
 .footer-social-icon {
-  width: 1.6rem;
+  width: 2.4rem;
 }
 
 .link-underline-transition:hover {
@@ -154,6 +154,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .app-footer {
+    border-radius: 3.2rem 3.2rem 0 0;
+  }
   .footer-container {
     flex-direction: column;
     align-items: center;

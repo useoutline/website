@@ -12,11 +12,21 @@ if (process.client) {
   });
   analytics.value = data;
 }
+
+// Scroll to top after page transition
+const nuxtApp = useNuxtApp();
+nuxtApp.hook("page:transition:finish", (e) => {
+  if (process.client) {
+    document.querySelector("#__nuxt")?.scrollTo(0, 0);
+  }
+});
 </script>
 
 <template>
   <NuxtLoadingIndicator color="#4685ff" />
-  <NuxtPage />
+  <NuxtLayout name="main">
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <style>
