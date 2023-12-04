@@ -21,18 +21,17 @@
               ><span class="font-bold">Outline</span> Analytics</span
             >
             <span class="fs-12">
-              Made with
+              Made with in India
+              <img
+                alt="🇮🇳"
+                src="~/assets/images/emojis/India-flag.png"
+                class="footer-emoji"
+              />
+              with
               <img
                 title="Love ❤️"
                 alt="Love ❤️"
                 src="~/assets/images/emojis/heart-emoji.png"
-                class="footer-emoji"
-              />
-              in
-              <img
-                title="India 🇮🇳"
-                alt="India 🇮🇳"
-                src="~/assets/images/emojis/India-flag.png"
                 class="footer-emoji"
               />
             </span>

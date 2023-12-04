@@ -71,6 +71,10 @@ img {
   vertical-align: middle;
 }
 
+iframe {
+  border: none;
+}
+
 /* Utilities */
 .flex {
   display: flex;
