@@ -25,7 +25,7 @@
               <NuxtImg
                 format="avif, webp"
                 alt="🇮🇳"
-                src="/emojis/India-flag.png"
+                src="/images/emojis/India-flag.png"
                 class="footer-emoji"
               />
               with
@@ -33,7 +33,7 @@
                 format="avif, webp"
                 title="Love ❤️"
                 alt="Love ❤️"
-                src="/emojis/heart-emoji.png"
+                src="/images/emojis/heart-emoji.png"
                 class="footer-emoji"
               />
             </span>
