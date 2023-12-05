@@ -21,7 +21,7 @@
               ><span class="font-bold">Outline</span> Analytics</span
             >
             <span class="fs-12">
-              Made with in India
+              Made in India
               <img
                 alt="🇮🇳"
                 src="~/assets/images/emojis/India-flag.png"
