@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-const config = useRuntimeConfig();
 const showEarlyAccessSignup = ref(false);
 
 async function handleClick() {
