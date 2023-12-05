@@ -71,6 +71,8 @@ function generateFeatureTitle(title: string) {
           </p>
         </div>
         <img
+          width="160"
+          height="160"
           :src="feature.image"
           :alt="feature.heading"
           class="feature-image"

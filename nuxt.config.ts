@@ -1,8 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/content"],
-  content: {},
+  modules: ["@nuxt/content", "@nuxt/image"],
   app: {
     pageTransition: {
       name: "page",
@@ -142,5 +141,19 @@ export default defineNuxtConfig({
     public: {
       outlineAnalyticsId: "", // can be overridden by NUXT_PUBLIC_OUTLINE_ANALYTICS_ID environment variable
     },
+  },
+  content: {},
+  image: {
+    formats: ["webp", "avif"],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      "2xl": 1536,
+    },
+    dir: "assets/images",
   },
 });

@@ -1,9 +1,10 @@
 <template>
   <section class="flex items-center justify-center app-illustration-section">
-    <img
-      src="~/assets/images/landing-page-illustration.png"
+    <NuxtImg
+      format="avif, webp"
+      src="/landing-page-illustration.png"
       width="900"
-      height="535.91"
+      height="536"
       alt="Outline Analytics App Illustration"
       class="app-illustration"
     />
