@@ -22,16 +22,18 @@
             >
             <span class="fs-12">
               Made in India
-              <img
+              <NuxtImg
+                format="avif, webp"
                 alt="🇮🇳"
-                src="~/assets/images/emojis/India-flag.png"
+                src="/emojis/India-flag.png"
                 class="footer-emoji"
               />
               with
-              <img
+              <NuxtImg
+                format="avif, webp"
                 title="Love ❤️"
                 alt="Love ❤️"
-                src="~/assets/images/emojis/heart-emoji.png"
+                src="/emojis/heart-emoji.png"
                 class="footer-emoji"
               />
             </span>
