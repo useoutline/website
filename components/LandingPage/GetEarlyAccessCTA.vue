@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import useOutlineAnalytics from "@useoutline/analytics";
-
 const config = useRuntimeConfig();
 const showEarlyAccessSignup = ref(false);
 
