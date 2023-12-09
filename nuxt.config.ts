@@ -155,6 +155,5 @@ export default defineNuxtConfig({
       "2xl": 1536,
     },
     provider: "netlify",
-    dir: "assets/images",
   },
 });
