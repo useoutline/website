@@ -2,7 +2,7 @@
   <section class="flex items-center justify-center app-illustration-section">
     <NuxtImg
       format="avif, webp"
-      src="/images/landing-page-illustration.png"
+      src="/landing-page-illustration.png"
       width="900"
       height="536"
       alt="Outline Analytics App Illustration"
