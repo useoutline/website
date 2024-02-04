@@ -50,11 +50,11 @@
             class="font-medium link-underline-transition color-light-400"
             >Docs</NuxtLink
           >
-          <NuxtLink
+          <!-- <NuxtLink
             to="/blog"
             class="font-medium link-underline-transition color-light-400"
             >Blog</NuxtLink
-          >
+          > -->
           <!-- <span
             to=""
             class="font-medium color-light-400"
