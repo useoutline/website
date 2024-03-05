@@ -5,7 +5,7 @@ async function handleClick() {
   showEarlyAccessSignup.value = true;
   if (process.client) {
     const analytics = useAnalytics();
-    analytics.value?.sendEvent("early-access-signup-click");
+    analytics.value?.sendEvent("early access signup click");
   }
 }
 </script>

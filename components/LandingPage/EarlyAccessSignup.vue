@@ -45,7 +45,7 @@ async function submitForm() {
   if (error.value) {
     if (process.client) {
       const analytics = useAnalytics();
-      analytics.value?.sendEvent("early-access-signup-error", {
+      analytics.value?.sendEvent("early access signup error", {
         error: error.value.message,
         email: formData.email,
         date: Date.now(),
