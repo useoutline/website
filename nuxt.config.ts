@@ -55,7 +55,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "/meta.png",
+          content: "https://useoutline.xyz/meta.jpg",
         },
         // Twitter
         {
@@ -78,7 +78,7 @@ export default defineNuxtConfig({
         },
         {
           property: "twitter:image",
-          content: "/meta.png",
+          content: "https://useoutline.xyz/meta.jpg",
         },
       ],
       link: [
